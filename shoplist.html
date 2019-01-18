@@ -4,14 +4,24 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>商家页面</title>
+    <title>洽柠檬-商家页面</title>
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/footer.js"></script>
 	<script type="text/javascript">
 		$(function(){
+			$(".user_center").hide();
+            $(".header .header_right .user_inf").mouseover(function () {
+                $(".user_center").show();
+            })
+            $(".header .header_right .user_inf").mouseleave(function () {
+                $(".user_center").hide();
+             })  
 			$(".rstcategories .res").click(function(){
-				$(".rstcategories .res").removeClass("active");
-				$(this).addClass("active");
+				$(".rstcategories .res").removeClass("li_active");
+				$(this).addClass("li_active");
+			})
+			$("#fetchMoreRst").click(function(){
+				$(".rststream").append($(".fourrows").html());
 			})
 		})
 	</script>
@@ -22,20 +32,34 @@
 	</style>
 </head>
 <body>
-	<header class="topbar">
-		<ul>
-			<li>
-				<h1 class="logo">
-					<a href="index.html" class="icon-logo">
-						<img src="img/logo2.png" alt="logo">
-					</a>
-				</h1>
-				<a href="#" class="topbar-item topbar-homepage focus">首页</a>
-				<a href="#" class="topbar-item topbar-order">我的订单</a>
-				<a href="#" class="topbar-item topbar-about">关于</a>				
-			</li>
-		</ul>
-	</header>
+	<div class="header_bg">
+		<div class="header">
+			<div class="logo"><a href="javascript:void(0)"><img src="img/logo.png" alt="" style="height: 75px"></a></div>
+			<div class="nav">
+				<ul>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="OrderInfo.html">我的订单</a></li>
+					<li><a href="recruitment.html">加盟合作</a></li>
+					<li><a href="javascript:void(0)">公司简介</a></li>
+				</ul>
+			</div>
+			<div class="header_right">
+				<div class="user_inf">
+					<span>恰柠檬</span>
+					<a href="javascript:void(0)"><img src="img/jt1.jpg" alt=""></a>
+					<div class="user_center">
+						<ul>
+							<li><a href="profile.html">个人中心</a></li>
+							<li><a href="javascript:void(0)">我的收藏</a></li>
+							<li><a href="javascript:void(0)">我的地址</a></li>
+							<li><a href="javascript:void(0)">我的订单</a></li>
+							<li><a href="javascript:void(0)">退出登录</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="main">
 		<div class="recent">
 			<div class="rstlocation">
@@ -56,274 +80,560 @@
 			</div>
 			<div class="rstcategories">
 				<span class="resclassify">商家分类:</span>
-				<a class="res active" href="">全部商家</a>
-				<a class="res" href="">美食</a>
-				<a class="res" href="">快餐便当</a>
-				<a class="res" href="">特色菜系</a>
-				<a class="res" href="">异国料理</a>
+				<a class="res li_active" href="javascript:void(0)">全部商家</a>
+				<a class="res" href="javascript:void(0)">美食</a>
+				<a class="res" href="javascript:void(0)">快餐便当</a>
+				<a class="res" href="javascript:void(0)">特色菜系</a>
+				<a class="res" href="javascript:void(0)">异国料理</a>
 			</div>
 			<div class="rstrestaurants">
 				<div class="rststream" style="height: 564px">
+					<div class="fourrows">
+					<div class="row">
 					<div class="rstblock">
-						<div class="rstblock-logo">
-							<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
-							<span class="rstblock-logo-text">21 分钟</span>
-						</div>
-						<div class="rstblock-content">
-							<div class="rstblock-title">1点点(中山2店)</div>
-							<div class="starrating icon-star">
-								<span class="icon-star" style="width:98%;"></span>
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
 							</div>
-							<div class="rstblock-cost">免配送费</div>
-							<div class="rstblock-activity">
-								<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
-							</div>
-						</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
 					</div>
 					<div class="rstblock">
-						<div class="rstblock-logo">
-							<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
-							<span class="rstblock-logo-text">21 分钟</span>
-						</div>
-						<div class="rstblock-content">
-							<div class="rstblock-title">1点点(中山2店)</div>
-							<div class="starrating icon-star">
-								<span class="icon-star" style="width:98%;"></span>
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
 							</div>
-							<div class="rstblock-cost">免配送费</div>
-							<div class="rstblock-activity">
-								<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
-							</div>
-						</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
 					</div>
 					<div class="rstblock">
-						<div class="rstblock-logo">
-							<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
-							<span class="rstblock-logo-text">21 分钟</span>
-						</div>
-						<div class="rstblock-content">
-							<div class="rstblock-title">1点点(中山2店)</div>
-							<div class="starrating icon-star">
-								<span class="icon-star" style="width:98%;"></span>
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
 							</div>
-							<div class="rstblock-cost">免配送费</div>
-							<div class="rstblock-activity">
-								<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
-							</div>
-						</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
 					</div>
 					<div class="rstblock">
-						<div class="rstblock-logo">
-							<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
-							<span class="rstblock-logo-text">21 分钟</span>
-						</div>
-						<div class="rstblock-content">
-							<div class="rstblock-title">1点点(中山2店)</div>
-							<div class="starrating icon-star">
-								<span class="icon-star" style="width:98%;"></span>
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
 							</div>
-							<div class="rstblock-cost">免配送费</div>
-							<div class="rstblock-activity">
-								<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
+					</div>						
+					</div>
+					<div class="row">
+					<div class="rstblock">
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
 							</div>
-						</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
 					</div>
 					<div class="rstblock">
-						<div class="rstblock-logo">
-							<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
-							<span class="rstblock-logo-text">21 分钟</span>
-						</div>
-						<div class="rstblock-content">
-							<div class="rstblock-title">1点点(中山2店)</div>
-							<div class="starrating icon-star">
-								<span class="icon-star" style="width:98%;"></span>
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
 							</div>
-							<div class="rstblock-cost">免配送费</div>
-							<div class="rstblock-activity">
-								<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
-							</div>
-						</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
 					</div>
 					<div class="rstblock">
-						<div class="rstblock-logo">
-							<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
-							<span class="rstblock-logo-text">21 分钟</span>
-						</div>
-						<div class="rstblock-content">
-							<div class="rstblock-title">1点点(中山2店)</div>
-							<div class="starrating icon-star">
-								<span class="icon-star" style="width:98%;"></span>
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
 							</div>
-							<div class="rstblock-cost">免配送费</div>
-							<div class="rstblock-activity">
-								<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
-							</div>
-						</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
 					</div>
 					<div class="rstblock">
-						<div class="rstblock-logo">
-							<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
-							<span class="rstblock-logo-text">21 分钟</span>
-						</div>
-						<div class="rstblock-content">
-							<div class="rstblock-title">1点点(中山2店)</div>
-							<div class="starrating icon-star">
-								<span class="icon-star" style="width:98%;"></span>
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
 							</div>
-							<div class="rstblock-cost">免配送费</div>
-							<div class="rstblock-activity">
-								<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
+					</div>						
+					</div>
+					<div class="row">
+					<div class="rstblock">
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
 							</div>
-						</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
 					</div>
 					<div class="rstblock">
-						<div class="rstblock-logo">
-							<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
-							<span class="rstblock-logo-text">21 分钟</span>
-						</div>
-						<div class="rstblock-content">
-							<div class="rstblock-title">1点点(中山2店)</div>
-							<div class="starrating icon-star">
-								<span class="icon-star" style="width:98%;"></span>
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
 							</div>
-							<div class="rstblock-cost">免配送费</div>
-							<div class="rstblock-activity">
-								<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
-							</div>
-						</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
 					</div>
 					<div class="rstblock">
-						<div class="rstblock-logo">
-							<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
-							<span class="rstblock-logo-text">21 分钟</span>
-						</div>
-						<div class="rstblock-content">
-							<div class="rstblock-title">1点点(中山2店)</div>
-							<div class="starrating icon-star">
-								<span class="icon-star" style="width:98%;"></span>
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
 							</div>
-							<div class="rstblock-cost">免配送费</div>
-							<div class="rstblock-activity">
-								<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
-							</div>
-						</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
 					</div>
 					<div class="rstblock">
-						<div class="rstblock-logo">
-							<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
-							<span class="rstblock-logo-text">21 分钟</span>
-						</div>
-						<div class="rstblock-content">
-							<div class="rstblock-title">1点点(中山2店)</div>
-							<div class="starrating icon-star">
-								<span class="icon-star" style="width:98%;"></span>
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
 							</div>
-							<div class="rstblock-cost">免配送费</div>
-							<div class="rstblock-activity">
-								<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
+					</div>						
+					</div>
+					<div class="row">
+					<div class="rstblock">
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
 							</div>
-						</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
 					</div>
 					<div class="rstblock">
-						<div class="rstblock-logo">
-							<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
-							<span class="rstblock-logo-text">21 分钟</span>
-						</div>
-						<div class="rstblock-content">
-							<div class="rstblock-title">1点点(中山2店)</div>
-							<div class="starrating icon-star">
-								<span class="icon-star" style="width:98%;"></span>
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
 							</div>
-							<div class="rstblock-cost">免配送费</div>
-							<div class="rstblock-activity">
-								<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
-							</div>
-						</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
 					</div>
 					<div class="rstblock">
-						<div class="rstblock-logo">
-							<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
-							<span class="rstblock-logo-text">21 分钟</span>
-						</div>
-						<div class="rstblock-content">
-							<div class="rstblock-title">1点点(中山2店)</div>
-							<div class="starrating icon-star">
-								<span class="icon-star" style="width:98%;"></span>
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
 							</div>
-							<div class="rstblock-cost">免配送费</div>
-							<div class="rstblock-activity">
-								<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
-							</div>
-						</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
 					</div>
 					<div class="rstblock">
-						<div class="rstblock-logo">
-							<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
-							<span class="rstblock-logo-text">21 分钟</span>
-						</div>
-						<div class="rstblock-content">
-							<div class="rstblock-title">1点点(中山2店)</div>
-							<div class="starrating icon-star">
-								<span class="icon-star" style="width:98%;"></span>
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
 							</div>
-							<div class="rstblock-cost">免配送费</div>
-							<div class="rstblock-activity">
-								<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
-							</div>
-						</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
+					</div>						
+					</div>
 					</div>
 					<div class="rstblock">
-						<div class="rstblock-logo">
-							<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
-							<span class="rstblock-logo-text">21 分钟</span>
-						</div>
-						<div class="rstblock-content">
-							<div class="rstblock-title">1点点(中山2店)</div>
-							<div class="starrating icon-star">
-								<span class="icon-star" style="width:98%;"></span>
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
 							</div>
-							<div class="rstblock-cost">免配送费</div>
-							<div class="rstblock-activity">
-								<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
-							</div>
-						</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
 					</div>
 					<div class="rstblock">
-						<div class="rstblock-logo">
-							<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
-							<span class="rstblock-logo-text">21 分钟</span>
-						</div>
-						<div class="rstblock-content">
-							<div class="rstblock-title">1点点(中山2店)</div>
-							<div class="starrating icon-star">
-								<span class="icon-star" style="width:98%;"></span>
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
 							</div>
-							<div class="rstblock-cost">免配送费</div>
-							<div class="rstblock-activity">
-								<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
-							</div>
-						</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
 					</div>
 					<div class="rstblock">
-						<div class="rstblock-logo">
-							<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
-							<span class="rstblock-logo-text">21 分钟</span>
-						</div>
-						<div class="rstblock-content">
-							<div class="rstblock-title">1点点(中山2店)</div>
-							<div class="starrating icon-star">
-								<span class="icon-star" style="width:98%;"></span>
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
 							</div>
-							<div class="rstblock-cost">免配送费</div>
-							<div class="rstblock-activity">
-								<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
+					</div>
+					<div class="rstblock">
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
 							</div>
-						</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
+					</div>
+					<div class="rstblock">
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
+							</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
+					</div>
+					<div class="rstblock">
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
+							</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
+					</div>
+					<div class="rstblock">
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
+							</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
+					</div>
+					<div class="rstblock">
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
+							</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
+					</div>
+										<div class="rstblock">
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
+							</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
+					</div>
+					<div class="rstblock">
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
+							</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
+					</div>
+					<div class="rstblock">
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
+							</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
+					</div>
+					<div class="rstblock">
+						<a href="cmlist.html">
+							<div class="rstblock-logo">
+								<img src="img/icon_shop_01.png" class="rstblock-logo-icon" width="70" height="70">
+								<span class="rstblock-logo-text">21 分钟</span>
+							</div>
+							<div class="rstblock-content">
+								<div class="rstblock-title">1点点(中山2店)</div>
+								<div class="starrating icon-star">
+									<span class="icon-star" style="width:98%;"></span>
+								</div>
+								<div class="rstblock-cost">免配送费</div>
+								<div class="rstblock-activity">
+									<i style="background:#fff;color:#999999;border:1px solid;padding:0;">保</i>
+								</div>
+							</div>							
+						</a>
 					</div>
 				</div>
-				<div id="fetchMoreRst"><a href="#">点击载入更多商家…</a></div>
+				<div id="fetchMoreRst"><a href="javascript:void(0)">点击载入更多商家…</a></div>
 			</div>
 		</div>
+	</div>
+	<div class="cart">
+		<a href="javascript:void(0)">
+			<div class="cart_toggle">
+				<span>总价:</span>
+				<span>¥500</span>
+				<span>配送费:¥0</span>
+			</div>
+		</a>
+		<a href="javascript:void(0) ">去结算>></a>
+	</div>
+	<div id="cart_context" class="cart_context">
+		<ul>
+			<li>
+				<span>购物车</span>
+				<a href="javascript:void(0)">[清空]</a>
+			</li>
+			<!--<li>-->
+				<!--<span class="cart_span_1">进店必买</span>-->
+				<!--<div class="cart_div_1">-->
+					<!--<a href="javascript:void(0)">-</a>-->
+					<!--<input type="text" value="1" readonly="readonly">-->
+					<!--<a href="javascript:void(0)">+</a>-->
+				<!--</div>-->
+				<!--<span class="cart_span_2">39.2</span>-->
+			<!--</li>-->
+		</ul>
+		<div class="clear"></div>
 	</div>
     <footer>
         <div class="container clearfix">
